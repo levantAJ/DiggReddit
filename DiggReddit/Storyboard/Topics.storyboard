@@ -22,11 +22,25 @@
                             <outlet property="delegate" destination="PxP-rj-5Ej" id="nin-O7-dgF"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="R15-LM-H9R"/>
+                    <navigationItem key="navigationItem" id="R15-LM-H9R">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="jdD-qq-Az0">
+                            <connections>
+                                <segue destination="2GH-rw-t0t" kind="show" identifier="ToAddTopic" id="23Y-Ts-19j"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NOB-ZS-BsS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1956" y="152"/>
+        </scene>
+        <!--AddTopic-->
+        <scene sceneID="SIx-a7-TXp">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddTopic" id="2GH-rw-t0t" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LEa-mP-gBH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2585" y="151"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CEr-pG-Xfs">

@@ -14,5 +14,7 @@ extension Constant {
     
     struct LocalizedString {
         static let DiggReddit = NSLocalizedString("Digg / Reddit", comment: "")
+        static let AddTopic = NSLocalizedString("Add Topic", comment: "")
+        static let Back = NSLocalizedString("Back", comment: "")
     }
 }

@@ -11,6 +11,8 @@
 		61AD080B1EAE59AC005DC7FD /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AD080A1EAE59AC005DC7FD /* UIView.swift */; };
 		61AD080D1EAE5BA1005DC7FD /* TopicsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AD080C1EAE5BA1005DC7FD /* TopicsViewModelTests.swift */; };
 		61AD080F1EAE67E4005DC7FD /* TopicsTableViewCellModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AD080E1EAE67E4005DC7FD /* TopicsTableViewCellModelTests.swift */; };
+		61AD08111EAE6F67005DC7FD /* AddTopic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61AD08101EAE6F67005DC7FD /* AddTopic.storyboard */; };
+		61AD08141EAE6FE0005DC7FD /* AddTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AD08131EAE6FE0005DC7FD /* AddTopicViewController.swift */; };
 		61C276631EAE40AB0080A1D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C276621EAE40AB0080A1D8 /* AppDelegate.swift */; };
 		61C276831EAE40AB0080A1D8 /* DiggRedditUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C276821EAE40AB0080A1D8 /* DiggRedditUITests.swift */; };
 		61C276981EAE410C0080A1D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61C276941EAE410C0080A1D8 /* Assets.xcassets */; };
@@ -50,6 +52,8 @@
 		61AD080A1EAE59AC005DC7FD /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		61AD080C1EAE5BA1005DC7FD /* TopicsViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicsViewModelTests.swift; sourceTree = "<group>"; };
 		61AD080E1EAE67E4005DC7FD /* TopicsTableViewCellModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicsTableViewCellModelTests.swift; sourceTree = "<group>"; };
+		61AD08101EAE6F67005DC7FD /* AddTopic.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddTopic.storyboard; sourceTree = "<group>"; };
+		61AD08131EAE6FE0005DC7FD /* AddTopicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTopicViewController.swift; sourceTree = "<group>"; };
 		61C2765F1EAE40AB0080A1D8 /* DiggReddit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiggReddit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61C276621EAE40AB0080A1D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61C2766E1EAE40AB0080A1D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -98,6 +102,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61AD08121EAE6FD2005DC7FD /* AddTopic */ = {
+			isa = PBXGroup;
+			children = (
+				61AD08131EAE6FE0005DC7FD /* AddTopicViewController.swift */,
+			);
+			path = AddTopic;
+			sourceTree = "<group>";
+		};
 		61C276561EAE40AB0080A1D8 = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				61C276991EAE42C50080A1D8 /* Topics.storyboard */,
+				61AD08101EAE6F67005DC7FD /* AddTopic.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -200,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				61C276B01EAE4D910080A1D8 /* Topics */,
+				61AD08121EAE6FD2005DC7FD /* AddTopic */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -359,6 +373,7 @@
 			files = (
 				61C276981EAE410C0080A1D8 /* Assets.xcassets in Resources */,
 				61C276B61EAE4D910080A1D8 /* TopicsTableViewCell.xib in Resources */,
+				61AD08111EAE6F67005DC7FD /* AddTopic.storyboard in Resources */,
 				61C2769A1EAE42C50080A1D8 /* Topics.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,6 +401,7 @@
 			files = (
 				61C276B51EAE4D910080A1D8 /* TopicsTableViewCell.swift in Sources */,
 				61C2769E1EAE44760080A1D8 /* Topic.swift in Sources */,
+				61AD08141EAE6FE0005DC7FD /* AddTopicViewController.swift in Sources */,
 				61AD080B1EAE59AC005DC7FD /* UIView.swift in Sources */,
 				61C276AA1EAE4B340080A1D8 /* LocalizedString.swift in Sources */,
 				61C276A81EAE45D40080A1D8 /* Constant.swift in Sources */,
