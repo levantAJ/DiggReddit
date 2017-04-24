@@ -17,6 +17,7 @@ final class TopicsTableViewControllerTests: XCTestCase {
     override func setUp() {
         super.setUp()
         topicsVC = UIStoryboard.viewController(screenName: "TopicsTableViewController", storyboardName: "Topics") as! TopicsTableViewController
+        topicsVC.loadViewIfNeeded() //Load view before testing 
         topics = [
             TopicsTableViewCellModel(topic: Topic(id: 1, title: "First topic", numberOfUpvotes: 12, numberOfDownvotes: 200)),
             TopicsTableViewCellModel(topic: Topic(id: 2, title: "First topic", numberOfUpvotes: 12, numberOfDownvotes: 200)),
