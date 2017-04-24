@@ -11,7 +11,7 @@
 // This ViewModel support only the assets that the View need
 
 final class TopicsTableViewCellModel {
-    fileprivate var topic: Topic!
+    fileprivate(set) var topic: Topic!
     
     init(topic: Topic) {
         self.topic = topic
@@ -53,5 +53,6 @@ extension TopicsTableViewCellModel: TopicsTableViewCellProtocol {
 extension TopicsTableViewCellModel: Equatable {
     public static func ==(lhs: TopicsTableViewCellModel, rhs: TopicsTableViewCellModel) -> Bool {
         return lhs.id == rhs.id
+
     }
 }

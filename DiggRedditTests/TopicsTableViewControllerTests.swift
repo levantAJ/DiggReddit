@@ -9,7 +9,7 @@
 import XCTest
 @testable import DiggReddit
 
-class TopicsTableViewControllerTests: XCTestCase {
+final class TopicsTableViewControllerTests: XCTestCase {
     
     var topicsVC: TopicsTableViewController!
     var topics: [TopicsTableViewCellModel]!
