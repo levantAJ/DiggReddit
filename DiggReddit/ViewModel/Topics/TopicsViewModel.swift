@@ -55,6 +55,6 @@ final class TopicsViewModel {
     }
     
     func add(topic: Topic) {
-        topics.append(TopicsTableViewCellModel(topic: topic))
+        topics.append(TopicsTableViewCellModel(topic: topic)) //Number of upvotes is zero, so new item shoule be at the last of the list
     }
 }

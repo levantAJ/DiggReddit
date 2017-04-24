@@ -53,5 +53,10 @@ extension TopicsTableViewController {
 extension TopicsTableViewController: AddTopicViewControllerDelegate {
     func addTopicViewController(_ controller: AddTopicViewController, didAdd topic: Topic) {
         viewModel.add(topic: topic)
+        let indexPath = IndexPath(row: viewModel.topics.count - 1, section: 0)
+        tableView.beginUpdates()
+        tableView.insertRows(at: [indexPath], with: .automatic)
+        tableView.endUpdates()
+        tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
     }
 }
