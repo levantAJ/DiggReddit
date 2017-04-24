@@ -53,4 +53,8 @@ final class TopicsViewModel {
         guard index < topics.count else { return nil }
         return topics[index]
     }
+    
+    func add(topic: Topic) {
+        topics.append(TopicsTableViewCellModel(topic: topic))
+    }
 }
