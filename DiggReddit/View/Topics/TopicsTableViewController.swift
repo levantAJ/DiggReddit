@@ -22,6 +22,14 @@ final class TopicsTableViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.reloadData()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ToAddTopic" {
+            let addTopicNC = segue.destination as! UINavigationController // Make sure we not lost the Add topic screen
+            let addTopicVC = addTopicNC.topViewController as! AddTopicViewController
+            addTopicVC.delegate = self // Handle did add topic
+        }
+    }
 }
 
 // MARK: - Table view data source
@@ -37,5 +45,18 @@ extension TopicsTableViewController {
             cell.set(topic: topic)
         }
         return cell
+    }
+}
+
+// MARK: - AddTopicViewControllerDelegate
+
+extension TopicsTableViewController: AddTopicViewControllerDelegate {
+    func addTopicViewController(_ controller: AddTopicViewController, didAdd topic: Topic) {
+        viewModel.add(topic: topic)
+        let indexPath = IndexPath(row: viewModel.topics.count - 1, section: 0)
+        tableView.beginUpdates()
+        tableView.insertRows(at: [indexPath], with: .automatic)
+        tableView.endUpdates()
+        tableView.scrollToRow(at: indexPath, at: .none, animated: true)
     }
 }

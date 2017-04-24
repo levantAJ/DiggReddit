@@ -17,6 +17,7 @@ final class TopicsTableViewControllerTests: XCTestCase {
     override func setUp() {
         super.setUp()
         topicsVC = UIStoryboard.viewController(screenName: "TopicsTableViewController", storyboardName: "Topics") as! TopicsTableViewController
+        topicsVC.loadViewIfNeeded() //Load view before testing 
         topics = [
             TopicsTableViewCellModel(topic: Topic(id: 1, title: "First topic", numberOfUpvotes: 12, numberOfDownvotes: 200)),
             TopicsTableViewCellModel(topic: Topic(id: 2, title: "First topic", numberOfUpvotes: 12, numberOfDownvotes: 200)),
@@ -28,6 +29,7 @@ final class TopicsTableViewControllerTests: XCTestCase {
             
         ]
         topicsVC.viewModel.topics = topics
+        topicsVC.tableView.reloadData()
     }
     
     func testDataSource() {
@@ -45,4 +47,11 @@ final class TopicsTableViewControllerTests: XCTestCase {
         XCTAssertEqual(topicsVC.tableView.estimatedRowHeight, 44)
     }
     
+    func testAddNewTopic() {
+        let count = topicsVC.tableView(topicsVC.tableView, numberOfRowsInSection: 0)
+        let addTopicVC = UIStoryboard.viewController(screenName: "AddTopicViewController", storyboardName: "AddTopic") as! AddTopicViewController
+        let newTopic = Topic(id: 0, title: "This is new topic", numberOfUpvotes: 0, numberOfDownvotes: 0)
+        topicsVC.addTopicViewController(addTopicVC, didAdd: newTopic)
+        XCTAssertEqual(topicsVC.tableView(topicsVC.tableView, numberOfRowsInSection: 0), count + 1)
+    }
 }
