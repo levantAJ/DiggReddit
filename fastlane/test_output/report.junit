@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='DiggRedditUITests.xctest' tests='15' failures='0'>
+  <testsuite name='DiggRedditTests.AddTopicViewControllerTests' tests='2' failures='0'>
+    <testcase classname='DiggRedditTests.AddTopicViewControllerTests' name='testTextChanged' time='0.011'/>
+    <testcase classname='DiggRedditTests.AddTopicViewControllerTests' name='testTitle' time='0.003'/>
+  </testsuite>
+  <testsuite name='DiggRedditTests.AddTopicViewModelTests' tests='1' failures='0'>
+    <testcase classname='DiggRedditTests.AddTopicViewModelTests' name='testSetTitle' time='0.001'/>
+  </testsuite>
+  <testsuite name='DiggRedditTests.TopicsTableViewCellModelTests' tests='4' failures='0'>
+    <testcase classname='DiggRedditTests.TopicsTableViewCellModelTests' name='testId' time='0.001'/>
+    <testcase classname='DiggRedditTests.TopicsTableViewCellModelTests' name='testNumberOfDownvotes' time='0.001'/>
+    <testcase classname='DiggRedditTests.TopicsTableViewCellModelTests' name='testNumberOfUpvotes' time='0.000'/>
+    <testcase classname='DiggRedditTests.TopicsTableViewCellModelTests' name='testTitle' time='0.000'/>
+  </testsuite>
+  <testsuite name='DiggRedditTests.TopicsTableViewCellTests' tests='3' failures='0'>
+    <testcase classname='DiggRedditTests.TopicsTableViewCellTests' name='testSetTopic' time='0.006'/>
+    <testcase classname='DiggRedditTests.TopicsTableViewCellTests' name='testVoteDown' time='0.003'/>
+    <testcase classname='DiggRedditTests.TopicsTableViewCellTests' name='testVoteUp' time='0.003'/>
+  </testsuite>
+  <testsuite name='DiggRedditTests.TopicsTableViewControllerTests' tests='2' failures='0'>
+    <testcase classname='DiggRedditTests.TopicsTableViewControllerTests' name='testAddNewTopic' time='0.085'/>
+    <testcase classname='DiggRedditTests.TopicsTableViewControllerTests' name='testDataSource' time='0.006'/>
+  </testsuite>
+  <testsuite name='DiggRedditTests.TopicsViewModelTests' tests='2' failures='0'>
+    <testcase classname='DiggRedditTests.TopicsViewModelTests' name='testGetTopicAtIndex' time='0.001'/>
+    <testcase classname='DiggRedditTests.TopicsViewModelTests' name='testSetTopics' time='0.001'/>
+  </testsuite>
+  <testsuite name='DiggRedditUITests.DiggRedditUITests' tests='1' failures='0'>
+    <testcase classname='DiggRedditUITests.DiggRedditUITests' name='testExample' time='6.782'/>
+  </testsuite>
+</testsuites>
