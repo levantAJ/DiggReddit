@@ -13,10 +13,10 @@
         <scene sceneID="0bM-GZ-WFD">
             <objects>
                 <tableViewController storyboardIdentifier="TopicsTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PxP-rj-5Ej" customClass="TopicsTableViewController" customModule="DiggReddit" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="DBT-4b-rih">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="DBT-4b-rih">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.96078431610000004" green="0.96078431610000004" blue="0.96078431610000004" alpha="1" colorSpace="calibratedRGB"/>
                         <connections>
                             <outlet property="dataSource" destination="PxP-rj-5Ej" id="qEm-Xr-u1k"/>
                             <outlet property="delegate" destination="PxP-rj-5Ej" id="nin-O7-dgF"/>
