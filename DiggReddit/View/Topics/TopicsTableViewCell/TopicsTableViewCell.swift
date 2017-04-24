@@ -31,7 +31,7 @@ final class TopicsTableViewCell: UITableViewCell {
     
     weak var delegate: TopicsTableViewCellDelegate? // Using weak to avoid memory leak
     
-    fileprivate var topic: TopicsTableViewCellProtocol!
+    var topic: TopicsTableViewCellProtocol!
     
     override func awakeFromNib() {
         super.awakeFromNib()
