@@ -47,3 +47,11 @@ extension TopicsTableViewCellModel: TopicsTableViewCellProtocol {
         return topic.title
     }
 }
+
+// MARK: - Equatable
+
+extension TopicsTableViewCellModel: Equatable {
+    public static func ==(lhs: TopicsTableViewCellModel, rhs: TopicsTableViewCellModel) -> Bool {
+        return lhs.id == rhs.id
+    }
+}

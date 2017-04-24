@@ -40,4 +40,15 @@ class TopicsViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.topics[5].numberOfUpvotes, 2)
         XCTAssertEqual(viewModel.topics[6].numberOfUpvotes, 1)
     }
+    
+    func testGetTopicAtIndex() {
+        XCTAssertEqual(viewModel.topics[0], viewModel.topic(at: 0))
+        XCTAssertEqual(viewModel.topics[1], viewModel.topic(at: 1))
+        XCTAssertEqual(viewModel.topics[2], viewModel.topic(at: 2))
+        XCTAssertEqual(viewModel.topics[3], viewModel.topic(at: 3))
+        XCTAssertEqual(viewModel.topics[4], viewModel.topic(at: 4))
+        XCTAssertEqual(viewModel.topics[5], viewModel.topic(at: 5))
+        XCTAssertEqual(viewModel.topics[6], viewModel.topic(at: 6))
+        XCTAssertNil(viewModel.topic(at: 7))
+    }
 }
