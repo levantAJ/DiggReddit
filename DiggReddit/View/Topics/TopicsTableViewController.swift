@@ -20,6 +20,7 @@ final class TopicsTableViewController: UITableViewController {
         tableView.register(identifier: Constant.TopicsTableViewCell.ReuseIdentifier)
         tableView.estimatedRowHeight = 44.0
         tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.reloadData()
     }
 }
 

@@ -21,19 +21,29 @@ final class TopicsTableViewCellModel {
 // MARK: - TopicsTableViewCellProtocol
 
 extension TopicsTableViewCellModel: TopicsTableViewCellProtocol {
+    var numberOfDownvotes: Int {
+        get {
+            return topic.numberOfDownvotes
+        }
+        set {
+            topic.numberOfDownvotes = newValue
+        }
+    }
+
+    var numberOfUpvotes: Int {
+        get {
+            return topic.numberOfUpvotes
+        }
+        set {
+            topic.numberOfUpvotes = newValue
+        }
+    }
+
     var id: Int {
         return topic.id
     }
     
     var title: String {
         return topic.title
-    }
-    
-    var numberOfUpvotes: String {
-        return "\(topic.numberOfUpvotes)"
-    }
-    
-    var numberOfDownvotes: String {
-        return "\(topic.numberOfDownvotes)"
     }
 }

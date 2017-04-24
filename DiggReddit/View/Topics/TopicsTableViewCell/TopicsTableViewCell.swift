@@ -13,8 +13,8 @@ import UIKit
 protocol TopicsTableViewCellProtocol {
     var id: Int { get }
     var title: String { get }
-    var numberOfUpvotes: String { get }
-    var numberOfDownvotes: String { get }
+    var numberOfUpvotes: Int { get set }
+    var numberOfDownvotes: Int { get set }
 }
 
 // This delegate to let owner listen event of up/down vote button tapped
@@ -44,8 +44,8 @@ final class TopicsTableViewCell: UITableViewCell {
     func set(topic: TopicsTableViewCellProtocol) {
         self.topic = topic
         titleLabel.text = topic.title
-        upvoteButton.setTitle(topic.numberOfUpvotes, for: .normal)
-        downvoteButton.setTitle(topic.numberOfDownvotes, for: .normal)
+        upvoteButton.setTitle("\(topic.numberOfUpvotes)", for: .normal)
+        downvoteButton.setTitle("\(topic.numberOfDownvotes)", for: .normal)
     }
 }
 
@@ -53,10 +53,16 @@ final class TopicsTableViewCell: UITableViewCell {
 
 extension TopicsTableViewCell {
     @IBAction func upvoteButtonTapped(button: UIButton) {
+        upvoteButton.isSelected = true
+        topic.numberOfUpvotes += 1
+        upvoteButton.setTitle("\(topic.numberOfUpvotes)", for: .normal)
         delegate?.topicsTableViewCell(self, upvote: topic)
     }
     
     @IBAction func downvoteButtonTapped(button: UIButton) {
+        downvoteButton.isSelected = true
+        topic.numberOfDownvotes += 1
+        downvoteButton.setTitle("\(topic.numberOfDownvotes)", for: .normal)
         delegate?.topicsTableViewCell(self, downvote: topic)
     }
 }
