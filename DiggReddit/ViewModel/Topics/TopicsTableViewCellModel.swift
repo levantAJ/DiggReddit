@@ -30,10 +30,10 @@ extension TopicsTableViewCellModel: TopicsTableViewCellProtocol {
     }
     
     var numberOfUpvotes: String {
-        return "\(topic.upvotes)"
+        return "\(topic.numberOfUpvotes)"
     }
     
     var numberOfDownvotes: String {
-        return "\(topic.downvotes)"
+        return "\(topic.numberOfDownvotes)"
     }
 }

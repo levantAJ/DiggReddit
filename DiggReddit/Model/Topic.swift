@@ -9,6 +9,6 @@
 struct Topic {
     var id: Int
     var title: String
-    var upvotes: [Int] //User ids who upvoted
-    var downvotes: [Int] //User ids who downvoted
+    var numberOfUpvotes: Int
+    var numberOfDownvotes: Int
 }

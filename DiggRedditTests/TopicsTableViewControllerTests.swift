@@ -18,12 +18,14 @@ class TopicsTableViewControllerTests: XCTestCase {
         super.setUp()
         topicsVC = UIStoryboard.viewController(screenName: "TopicsTableViewController", storyboardName: "Topics") as! TopicsTableViewController
         topics = [
-            TopicsTableViewCellModel(topic: Topic(id: 1, title: "First topic", upvotes: [1, 2, 3, 4, 5], downvotes: [6, 7, 8, 9, 10])),
-            TopicsTableViewCellModel(topic: Topic(id: 2, title: "First topic", upvotes: [1, 2, 3, 4, 5], downvotes: [6, 7, 8, 9, 10])),
-            TopicsTableViewCellModel(topic: Topic(id: 3, title: "First topic", upvotes: [1, 2, 3, 4, 5], downvotes: [6, 7, 8, 9, 10])),
-            TopicsTableViewCellModel(topic: Topic(id: 4, title: "First topic", upvotes: [1, 2, 3, 4, 5], downvotes: [6, 7, 8, 9, 10])),
-            TopicsTableViewCellModel(topic: Topic(id: 5, title: "First topic", upvotes: [1, 2, 3, 4, 5], downvotes: [6, 7, 8, 9, 10])),
-            TopicsTableViewCellModel(topic: Topic(id: 6, title: "First topic", upvotes: [1, 2, 3, 4, 5], downvotes: [6, 7, 8, 9, 10])),
+            TopicsTableViewCellModel(topic: Topic(id: 1, title: "First topic", numberOfUpvotes: 12, numberOfDownvotes: 200)),
+            TopicsTableViewCellModel(topic: Topic(id: 2, title: "First topic", numberOfUpvotes: 12, numberOfDownvotes: 200)),
+            TopicsTableViewCellModel(topic: Topic(id: 3, title: "First topic", numberOfUpvotes: 12, numberOfDownvotes: 200)),
+            TopicsTableViewCellModel(topic: Topic(id: 4, title: "First topic", numberOfUpvotes: 12, numberOfDownvotes: 200)),
+            TopicsTableViewCellModel(topic: Topic(id: 5, title: "First topic", numberOfUpvotes: 12, numberOfDownvotes: 200)),
+            TopicsTableViewCellModel(topic: Topic(id: 6, title: "First topic", numberOfUpvotes: 12, numberOfDownvotes: 200)),
+            TopicsTableViewCellModel(topic: Topic(id: 7, title: "First topic", numberOfUpvotes: 12, numberOfDownvotes: 200)),
+            
         ]
         topicsVC.viewModel.topics = topics
     }
@@ -38,6 +40,9 @@ class TopicsTableViewControllerTests: XCTestCase {
         } else {
             XCTAssertNotNil(cell.reuseIdentifier)
         }
+        
+        XCTAssertEqual(topicsVC.tableView.rowHeight, UITableViewAutomaticDimension)
+        XCTAssertEqual(topicsVC.tableView.estimatedRowHeight, 44)
     }
     
 }

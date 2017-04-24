@@ -18,6 +18,8 @@ final class TopicsTableViewController: UITableViewController {
         super.viewDidLoad()
         navigationItem.title = Constant.LocalizedString.DiggReddit
         tableView.register(identifier: Constant.TopicsTableViewCell.ReuseIdentifier)
+        tableView.estimatedRowHeight = 44.0
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
 }
 
