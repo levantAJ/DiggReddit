@@ -45,4 +45,11 @@ final class TopicsTableViewControllerTests: XCTestCase {
         XCTAssertEqual(topicsVC.tableView.estimatedRowHeight, 44)
     }
     
+    func testAddNewTopic() {
+        let count = topicsVC.tableView(topicsVC.tableView, numberOfRowsInSection: 0)
+        let addTopicVC = UIStoryboard.viewController(screenName: "AddTopicViewController", storyboardName: "AddTopic") as! AddTopicViewController
+        let newTopic = Topic(id: 0, title: "This is new topic", numberOfUpvotes: 0, numberOfDownvotes: 0)
+        topicsVC.addTopicViewController(addTopicVC, didAdd: newTopic)
+        XCTAssertEqual(topicsVC.tableView(topicsVC.tableView, numberOfRowsInSection: 0), count + 1)
+    }
 }
