@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F43c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="t3B-OQ-AFz">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Topics Table View Controller-->
+        <scene sceneID="0bM-GZ-WFD">
+            <objects>
+                <tableViewController storyboardIdentifier="TopicsTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PxP-rj-5Ej" customClass="TopicsTableViewController" customModule="DiggReddit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="DBT-4b-rih">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.96078431610000004" green="0.96078431610000004" blue="0.96078431610000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <connections>
+                            <outlet property="dataSource" destination="PxP-rj-5Ej" id="qEm-Xr-u1k"/>
+                            <outlet property="delegate" destination="PxP-rj-5Ej" id="nin-O7-dgF"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="R15-LM-H9R"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NOB-ZS-BsS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1956" y="152"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CEr-pG-Xfs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="t3B-OQ-AFz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ted-uF-N79">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PxP-rj-5Ej" kind="relationship" relationship="rootViewController" id="sb1-aJ-7Rq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5gV-IO-QNG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1093.5999999999999" y="151.57421289355324"/>
+        </scene>
+    </scenes>
+</document>
