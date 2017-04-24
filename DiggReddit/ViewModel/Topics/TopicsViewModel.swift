@@ -7,7 +7,7 @@
 //
 
 final class TopicsViewModel {
-    fileprivate(set) var topics: [TopicsTableViewCellModel] = []
+    var topics: [TopicsTableViewCellModel] = []
     
     func topic(at index: Int) -> TopicsTableViewCellModel? {
         guard index < topics.count else { return nil }
