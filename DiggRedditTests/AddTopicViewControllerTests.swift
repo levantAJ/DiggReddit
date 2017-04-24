@@ -32,5 +32,11 @@ final class AddTopicViewControllerTests: XCTestCase {
         addTopicVC.topicTextView.text = "New topic"
         addTopicVC.textViewDidChange(addTopicVC.topicTextView)
         XCTAssertEqual(addTopicVC.viewModel.newTopic.title, addTopicVC.topicTextView.text)
+        XCTAssertEqual(addTopicVC.navigationItem.rightBarButtonItem!.isEnabled, true)
+        
+        addTopicVC.topicTextView.text = ""
+        addTopicVC.textViewDidChange(addTopicVC.topicTextView)
+        XCTAssertEqual(addTopicVC.viewModel.newTopic.title, addTopicVC.topicTextView.text)
+        XCTAssertEqual(addTopicVC.navigationItem.rightBarButtonItem!.isEnabled, false)
     }
 }

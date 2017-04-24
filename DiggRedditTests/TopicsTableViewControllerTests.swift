@@ -29,6 +29,7 @@ final class TopicsTableViewControllerTests: XCTestCase {
             
         ]
         topicsVC.viewModel.topics = topics
+        topicsVC.tableView.reloadData()
     }
     
     func testDataSource() {

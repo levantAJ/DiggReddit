@@ -57,6 +57,6 @@ extension TopicsTableViewController: AddTopicViewControllerDelegate {
         tableView.beginUpdates()
         tableView.insertRows(at: [indexPath], with: .automatic)
         tableView.endUpdates()
-        tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+        tableView.scrollToRow(at: indexPath, at: .none, animated: true)
     }
 }
